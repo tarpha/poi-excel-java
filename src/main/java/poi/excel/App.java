@@ -22,60 +22,32 @@ public class App {
 
         List<ExcelUtilVO> list = new ArrayList<ExcelUtilVO>();
 
+        TargetVO trg = new TargetVO();
+
+        List<List<ExcelUtilVO>> arrList = new ArrayList<List<ExcelUtilVO>>();
+
         ExcelUtilVO vo = new ExcelUtilVO();
         vo.setSourceFieldName("Field2");
         vo.setTargetFieldName("targetFieldName");
         vo.setTargetFieldType(String.class);
-
         list.add(vo);
 
         vo = new ExcelUtilVO();
         vo.setSourceFieldName("Field1");
         vo.setTargetFieldName("sourceFieldName");
         vo.setTargetFieldType(String.class);
-
-        list.add(vo);
-
-        TargetVO trg = new TargetVO();
-
-        List<List<ExcelUtilVO>> arrList = new ArrayList<List<ExcelUtilVO>>();
-
-        arrList.add(list);
-
-        list = new ArrayList<ExcelUtilVO>();
-
-        vo = new ExcelUtilVO();
-        vo.setSourceFieldName("Field7");
-        vo.setTargetFieldName("targetFieldName");
-        vo.setTargetFieldType(String.class);
-
-        list.add(vo);
-
-        vo = new ExcelUtilVO();
-        vo.setSourceFieldName("Field8");
-        vo.setTargetFieldName("sourceFieldName");
-        vo.setTargetFieldType(String.class);
-
         list.add(vo);
 
         arrList.add(list);
 
         list = new ArrayList<ExcelUtilVO>();
+        list.add(new ExcelUtilVO("Field7", "targetFieldName", String.class));
+        list.add(new ExcelUtilVO("Field8", "sourceFieldName", String.class));
+        arrList.add(list);
 
-        vo = new ExcelUtilVO();
-        vo.setSourceFieldName("Field9");
-        vo.setTargetFieldName("targetFieldName");
-        vo.setTargetFieldType(String.class);
-
-        list.add(vo);
-
-        vo = new ExcelUtilVO();
-        vo.setSourceFieldName("Field10");
-        vo.setTargetFieldName("sourceFieldName");
-        vo.setTargetFieldType(String.class);
-
-        list.add(vo);
-
+        list = new ArrayList<ExcelUtilVO>();
+        list.add(new ExcelUtilVO("Field9", "targetFieldName", String.class));
+        list.add(new ExcelUtilVO("Field10", "sourceFieldName", String.class));
         arrList.add(list);
 
         try {

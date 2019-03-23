@@ -13,6 +13,28 @@ public class ExcelUtilVO {
 		private short 		index = -1;					//값의 column index (Excel)
 
 		/**
+		 * 생성자
+		 * 
+		 * @author LJW
+		 */
+		public ExcelUtilVO() {
+		}
+
+		/**
+		 * 생성자
+		 * 
+		 * @author LJW
+		 * @param sourceFieldName Excel sheet dataset의 header 명
+		 * @param targetFieldName VO class의 변수 명
+		 * @param targetFieldType VO class의 변수 형
+		 */
+		public ExcelUtilVO(String sourceFieldName, String targetFieldName, Class<?> targetFieldType) {
+			this.sourceFieldName = sourceFieldName;
+			this.targetFieldName = targetFieldName;
+			this.targetFieldType = targetFieldType;
+		}
+
+		/**
 		 * Getter - Excel sheet dataset의 header 명
 		 * 
 		 * @author LJW
